@@ -1,2 +1,2 @@
 # Structures
-Strucutural Design for the Stage 
+Structural Design for the Stage
