@@ -77,6 +77,15 @@
     margin-top: 0;
     margin-bottom: 0.5rem;
   }
+
+  /* Definition Format Style */
+  .def{
+    font-family: monospace;
+  }
+
+  .benWarn{
+    background-color: #FFFF00
+  }
   
   p {
     margin-top: 0;
