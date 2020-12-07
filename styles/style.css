@@ -83,8 +83,21 @@
     font-family: monospace;
   }
 
+  .subDef{
+    font-family:monospace;
+    text-indent: 50px;
+  }
+
+  .tableCont{
+    text-align: center;
+  }
+
   .benWarn{
     background-color: #FFFF00
+  }
+
+  .strucImg{
+    justify-content: right;
   }
   
   p {
