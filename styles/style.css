@@ -83,7 +83,7 @@
     font-family: monospace;
   }
 
-  .subDef{
+  span.subDef{
     font-family: monospace;
     text-indent: 50px;
   }
