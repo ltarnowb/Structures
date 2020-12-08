@@ -33,7 +33,9 @@
     </header>
     
     <div class="accordion" id="accordionExample">
-        <div class="card">
+        
+      <!-- CH 3.1 -->
+      <div class="card">
           <div class="card-header" id="chapter31">
             <h2 class="mb-0">
               <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
@@ -44,10 +46,73 @@
       
           <div id="collapseOne" class="collapse show" aria-labelledby="chapter31" data-parent="#accordionExample">
             <div class="card-body">
-              Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+              <p>
+                <h3>Introduction:</h3>
+                INSERT TEXT FOR INTRODUCTION OF WHAT THIS CHAPTER 
+                <br>
+                <br>
+                <h3>Types of Beams</h3>
+                <span class="def">Joists:</span> Relatively small beams which are used in repetitive systems such as floors. <br>
+                <span class="def">Rafters:</span> Special type of joist used in sloping roofs.  <br>
+                <span class="def">Girders:</span> Large beams which support smaller beams such as joists.  <br>
+                <br>
+                
+                ​<picture>
+                  <source srcset="/Structures/media/">
+                   <!-- ADD PHOTO of TYPES OF BEAMS--> 
+                </picture>
+                <br>
+
+                <h3>Types of Loads</h3>
+                <span class="def">Dead Loads:</span> A load that is a permanent part of the beam. <br>
+                <span class="def">Live Loads:</span> A live load is a temporary load that will act on the beam.  <br>
+                <span class="def">Point Loads:</span> When a load acts specifically at one spot on the beam.  <br>
+                <span class="def">Distributed Load:</span> A load which acts uniformly across a beam.  <br>
+                <br>
+                <table>
+                  <tr>
+                    <th>Standard Live Loads</th>
+                    <th></th>
+                  </tr>
+                  <tr>
+                    <td>First Floor Residential Home</td>
+                    <td>40 PSF</td>
+                  </tr>
+                  <tr>
+                    <td>Temporary Platforms or Structures</td>
+                    <td>50 PSF</td>
+                  </tr>
+                  <tr>
+                    <td>Grandstands, Bleachers</td>
+                    <td>100 PSF</td>
+                  </tr>
+                  <tr>
+                    <td>Stage Floor</td>
+                    <td>150 PSF</td>
+                  </tr>
+                </table>
+
+                <h3>Tributary Area</h3>
+                <span class="def">Tributary Area:</span> The area of a distributed load that is supported by a beam. For an “interior beam” this is the area defined by the distance from half way between the beam next to it on one side to half way between the next beam (s) by the length of the beam (l). For an “exterior beam” this area is defined by the distance from the beam to half way to the next beam by the length of the beam. This area multiplied can be multiplied by the Pounds/SQFT gives us the total load of the uniformly distributed load (W).<br>
+                <p>
+                  With the tributary area we can take a load given in PSF (pounds/square foot) and convert it into PLF (pounds/linear foot). We are able to represent the same amount of weight in an area in the top view as a line in the side view. 
+                </p>
+                
+                ​<picture>
+                  <source srcset="/Structures/media/">
+                   <!-- ADD PHOTO of Tributary Area--> 
+                </picture>
+                <br>
+
+                <span class="benWarn">STRUCTURES CONVENTION: UP or RIGHT is POS(+) and DOWN or LEFT is NEG(-)</span>
+
+
+              </p>
             </div>
           </div>
         </div>
+        
+        <!-- Ch 3.2 -->
         <div class="card">
           <div class="card-header" id="chapter32">
             <h2 class="mb-0">
@@ -58,10 +123,34 @@
           </div>
           <div id="collapseTwo" class="collapse" aria-labelledby="Chapter32" data-parent="#accordionExample">
             <div class="card-body">
-              Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+              <p>
+                <h3>Reactions</h3>
+                <span class="def">Reaction:</span> The external load on a beam that exerts an equal upward reaction to where beam is resting on. <br>
+                <ul>
+                  <li>A reaction is defined as the Sum of the Moments about a point. The point we will use is where the beam interacts with something holding it up. This will usually be a column, girder, or wire rope holding it up.</li>
+                  <li>\sum{M_{R1\ }=0=\ d(R1)\ -\ d(Loads)}</li>
+                  <li>To check if the equation is correct take the sum of the vertical forces and it should equal zero. Because this will show that the problem is in equilibrium</li>  
+                </ul>
+
+                <span class="def">Magnitude:</span> The value of a force. Measured in (lbs or kips). <br>
+                <span class="def">Direction:</span> The relationship between the line of action and a reference line. Ex/ up or down, left or right. <br>
+                <span class="def">Sense:</span> Defines whether the force is POS(+) or NEG(-).<br>
+                
+                ​<picture>
+                  <source srcset="/Structures/media/">
+                    <!-- ADD PHOTO of Tributary Area--> 
+                </picture>
+
+                <br>
+                <span class="benWarn">STRUCTURES CONVENTION: UP or RIGHT is POS(+) and DOWN or LEFT is NEG(-)</span>
+
+
+              </p>
             </div>
           </div>
         </div>
+        
+        <!-- Ch 3.3 -->
         <div class="card">
           <div class="card-header" id="chapter33">
             <h2 class="mb-0">
@@ -72,11 +161,32 @@
           </div>
           <div id="collapseThree" class="collapse" aria-labelledby="chapter33" data-parent="#accordionExample">
             <div class="card-body">
-              Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+              <p>
+                <h3>Introduction:</h3>
+                INSERT TEXT FOR INTRODUCTION OF WHAT THIS CHAPTER 
+                <br>
+                <br>
+                <h3>Parts of Force</h3>
+                <span class="def">Line of Action:</span> An Imaginary line that continues through the path of the force infinitely behind and in front of the force. <br>
+                <span class="def">Magnitude:</span> The value of a force. Measured in (lbs or kips). <br>
+                <span class="def">Direction:</span> The relationship between the line of action and a reference line. Ex/ up or down, left or right. <br>
+                <span class="def">Sense:</span> Defines whether the force is POS(+) or NEG(-).<br>
+                
+                ​<picture>
+                  <source srcset="/Structures/media/">
+                    <!-- ADD PHOTO of Tributary Area--> 
+                </picture>
+
+                <br>
+                <span class="benWarn">STRUCTURES CONVENTION: UP or RIGHT is POS(+) and DOWN or LEFT is NEG(-)</span>
+
+
+              </p>
             </div>
           </div>
         </div>
-
+        
+        <!-- Ch 3.4 -->
         <div class="card">
           <div class="card-header" id="chapter34">
             <h2 class="mb-0">
@@ -87,11 +197,33 @@
           </div>
           <div id="collapseFour" class="collapse" aria-labelledby="chapter34" data-parent="#accordionExample">
             <div class="card-body">
-              Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+              <p>
+                <h3>Introduction:</h3>
+                INSERT TEXT FOR INTRODUCTION OF WHAT THIS CHAPTER 
+                <br>
+                <br>
+                <h3>Parts of Force</h3>
+                <span class="def">Line of Action:</span> An Imaginary line that continues through the path of the force infinitely behind and in front of the force. <br>
+                <span class="def">Magnitude:</span> The value of a force. Measured in (lbs or kips). <br>
+                <span class="def">Direction:</span> The relationship between the line of action and a reference line. Ex/ up or down, left or right. <br>
+                <span class="def">Sense:</span> Defines whether the force is POS(+) or NEG(-).<br>
+                
+                ​<picture>
+                  <source srcset="/Structures/media/">
+                    <!-- ADD PHOTO of Tributary Area--> 
+                </picture>
+
+                <br>
+                <span class="benWarn">STRUCTURES CONVENTION: UP or RIGHT is POS(+) and DOWN or LEFT is NEG(-)</span>
+
+
+              </p>
             </div>
           </div>
         </div>
 
+        
+        <!-- Ch 3.5 -->
         <div class="card">
             <div class="card-header" id="chapter35">
               <h2 class="mb-0">
@@ -102,11 +234,32 @@
             </div>
             <div id="collapseFour" class="collapse" aria-labelledby="chapter35" data-parent="#accordionExample">
               <div class="card-body">
-                Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                <p>
+                  <h3>Introduction:</h3>
+                  INSERT TEXT FOR INTRODUCTION OF WHAT THIS CHAPTER 
+                  <br>
+                  <br>
+                  <h3>Parts of Force</h3>
+                  <span class="def">Line of Action:</span> An Imaginary line that continues through the path of the force infinitely behind and in front of the force. <br>
+                  <span class="def">Magnitude:</span> The value of a force. Measured in (lbs or kips). <br>
+                  <span class="def">Direction:</span> The relationship between the line of action and a reference line. Ex/ up or down, left or right. <br>
+                  <span class="def">Sense:</span> Defines whether the force is POS(+) or NEG(-).<br>
+                  
+                  ​<picture>
+                    <source srcset="/Structures/media/">
+                      <!-- ADD PHOTO of Tributary Area--> 
+                  </picture>
+  
+                  <br>
+                  <span class="benWarn">STRUCTURES CONVENTION: UP or RIGHT is POS(+) and DOWN or LEFT is NEG(-)</span>
+  
+  
+                </p>
               </div>
             </div>
           </div>
 
+          <!-- Ch 3.6 -->
           <div class="card">
             <div class="card-header" id="chapter36">
               <h2 class="mb-0">
@@ -117,7 +270,27 @@
             </div>
             <div id="collapseFour" class="collapse" aria-labelledby="chapter36" data-parent="#accordionExample">
               <div class="card-body">
-                Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                <p>
+                  <h3>Introduction:</h3>
+                  INSERT TEXT FOR INTRODUCTION OF WHAT THIS CHAPTER 
+                  <br>
+                  <br>
+                  <h3>Parts of Force</h3>
+                  <span class="def">Line of Action:</span> An Imaginary line that continues through the path of the force infinitely behind and in front of the force. <br>
+                  <span class="def">Magnitude:</span> The value of a force. Measured in (lbs or kips). <br>
+                  <span class="def">Direction:</span> The relationship between the line of action and a reference line. Ex/ up or down, left or right. <br>
+                  <span class="def">Sense:</span> Defines whether the force is POS(+) or NEG(-).<br>
+                  
+                  ​<picture>
+                    <source srcset="/Structures/media/">
+                      <!-- ADD PHOTO of Tributary Area--> 
+                  </picture>
+  
+                  <br>
+                  <span class="benWarn">STRUCTURES CONVENTION: UP or RIGHT is POS(+) and DOWN or LEFT is NEG(-)</span>
+  
+  
+                </p>
               </div>
             </div>
           </div>
