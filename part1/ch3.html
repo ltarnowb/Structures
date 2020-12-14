@@ -199,21 +199,17 @@
                 <span class="benWarn">STRUCTURES CONVENTION: a POS (+) moment is bending down and a NEG (-) moment is bending up</span>
                 <span class="subDef">Mmax:</span> Is the largest Absolute value of bending moment. <br>
                 Is the largest Absolute value of bending moment. <br>
+
+                <span style="font-weight: bold">The Bending Moment at any point, Mx, equals the sum of the moments at and to the left of that point.</span>
                 <br>
-                <br>
-                <h3>Parts of Force</h3>
-                <span class="def">Line of Action:</span> An Imaginary line that continues through the path of the force infinitely behind and in front of the force. <br>
-                <span class="def">Magnitude:</span> The value of a force. Measured in (lbs or kips). <br>
-                <span class="def">Direction:</span> The relationship between the line of action and a reference line. Ex/ up or down, left or right. <br>
-                <span class="def">Sense:</span> Defines whether the force is POS(+) or NEG(-).<br>
-                
+
                 ​<picture>
                   <source srcset="/Structures/media/">
-                    <!-- ADD PHOTO of Tributary Area--> 
+                    <!-- ADD PHOTO of Moment Explanation--> 
                 </picture>
 
                 <br>
-                <span class="benWarn">STRUCTURES CONVENTION: UP or RIGHT is POS(+) and DOWN or LEFT is NEG(-)</span>
+                <span class="benWarn">STRUCTURES CONVENTION: Points for a moment diagram should be taken at each end, where the shear diagram crosses 0, and any points to improve accuracy of the drawing (at the desigers Discretion)</span>
 
 
               </p>
@@ -225,33 +221,62 @@
       <div class="card">
             <div class="card-header" id="chapter35">
               <h2 class="mb-0">
-                <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
                   Chapter 3.5: Overhangs and Cantilever (pg 43-49)
                 </button>
               </h2>
             </div>
-            <div id="collapseFour" class="collapse" aria-labelledby="chapter35" data-parent="#accordionExample">
+            <div id="collapseFive" class="collapse" aria-labelledby="chapter35" data-parent="#accordionExample">
               <div class="card-body">
                 <p>
-                  <h3>Introduction:</h3>
-                  INSERT TEXT FOR INTRODUCTION OF WHAT THIS CHAPTER 
+                  <h3>Overhangs</h3>
+                  <ul>
+                    <li>Non-standard beams</li>
+                    <li> Vmax does not necessarily occur at the reaction</li>
+                    <li>Shear can cross through zero multiple times.</li>
+                  </ul>
+
                   <br>
+
+                  <h3>Cantilever</h3>
+                  <ul>
+                    <li>Non-standard beams</li>
+                    <li>Vmax occurs at the reaction</li>
+                    <li>Shear does not cross through zero at multiple points</li>
+                  </ul>
                   <br>
-                  <h3>Parts of Force</h3>
-                  <span class="def">Line of Action:</span> An Imaginary line that continues through the path of the force infinitely behind and in front of the force. <br>
-                  <span class="def">Magnitude:</span> The value of a force. Measured in (lbs or kips). <br>
-                  <span class="def">Direction:</span> The relationship between the line of action and a reference line. Ex/ up or down, left or right. <br>
-                  <span class="def">Sense:</span> Defines whether the force is POS(+) or NEG(-).<br>
+                  The process for anlyzing a cantilver or overhanging beam is the same process as a standard beam.<br>
+                  
+                  <span class="def">Inflection Point:</span> The inflection point is where the beam changes from bending down to bending up, <span style="font-weight: bold;">this is shown at the point where the moment crosses zero.</span><br>
+
+                  <span class="benWarn">STRUCTURES CONVENTION: BENDING IS A COMBINATION OF COMPRESSIVE AND TENSILE STRESS, pg 45</span>
+
+                  "When a “standard” beam is bending down; the top of the beam is in compression and the bottom of the beam is in tension, however at a point of inflection and “when the flexure of the beam inverts, the top of the beam will be in tension and the bottom will be in compression”.
                   
                   ​<picture>
                     <source srcset="/Structures/media/">
-                      <!-- ADD PHOTO of Tributary Area--> 
+                      <!-- ADD PHOTO of EQUATION FOR INFLECTION POINT--> 
                   </picture>
   
-                  <br>
-                  <span class="benWarn">STRUCTURES CONVENTION: UP or RIGHT is POS(+) and DOWN or LEFT is NEG(-)</span>
-  
-  
+                  <span style="font-weight: bold;">Things to look out for:</span> <br>
+                  <ul>
+                    <li>Where the vertical shear diagram crosses 0 multiple times. Use these locations in the moment diagram</li>
+                    <li>At each point where vertical shear crosses 0 it is one of the options for where Mmax will be.</li>
+                  </ul>
+
+                  <h3>Concept Box Page 48 - Double Overhang relationship</h3>
+                  <ul>
+                    <li>The concept shown on pg. 48 illustrates how to maximize the efficiency of bearing a load by moving the supports of a beam away from the ends to reduce the Mmax, allowing for a smaller beam to be used. </li>
+                    <li>The example shows that the beam decreases Mmax by shifting the entire curve down. </li>
+                    <li class="benWarn">The positive and negative moments of a double-overhanging beam will be equal when a/b =.354 (where a is the length of the overhang and l is the distance between the supports)</li>
+                    <li class="benWarn"> Mmax will be smallest when a/l =.354 and will allow for the smallest beam</li>
+                    <li>If the ratio of a/l is greater than .354 the moment at the reactions becomes Mmax</li>
+                  <ul>
+                  
+                  ​<picture>
+                    <source srcset="/Structures/media/">
+                        <!-- ADD PHOTO of Double Overhang example--> 
+                    </picture>
                 </p>
               </div>
             </div>
@@ -261,33 +286,22 @@
       <div class="card">
             <div class="card-header" id="chapter36">
               <h2 class="mb-0">
-                <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
                   Chapter 3.6: Case Formulas (pg 50-53)
                 </button>
               </h2>
             </div>
-            <div id="collapseFour" class="collapse" aria-labelledby="chapter36" data-parent="#accordionExample">
+            <div id="collapseSix" class="collapse" aria-labelledby="chapter36" data-parent="#accordionExample">
               <div class="card-body">
                 <p>
-                  <h3>Introduction:</h3>
-                  INSERT TEXT FOR INTRODUCTION OF WHAT THIS CHAPTER 
+                  <h3>Case Formulas</h3>
+                  <span class="def">Case Formulas:</span> Standardized equations that solve for Reactions, Moments, Vertical Shear, and Deflection for standard loading conditions.<br>
+
+                  <span style="font-weight: bold;">SEE APPENDIX B FOR FORMULAS</span> 
                   <br>
+                  <span class="benWarn">We can combine case formulas to solve for more complex loading conditions, only if Mmax occurs at the same location for all loading conditions.!!! – pg 52 </span>
                   <br>
-                  <h3>Parts of Force</h3>
-                  <span class="def">Line of Action:</span> An Imaginary line that continues through the path of the force infinitely behind and in front of the force. <br>
-                  <span class="def">Magnitude:</span> The value of a force. Measured in (lbs or kips). <br>
-                  <span class="def">Direction:</span> The relationship between the line of action and a reference line. Ex/ up or down, left or right. <br>
-                  <span class="def">Sense:</span> Defines whether the force is POS(+) or NEG(-).<br>
-                  
-                  ​<picture>
-                    <source srcset="/Structures/media/">
-                      <!-- ADD PHOTO of Tributary Area--> 
-                  </picture>
-  
-                  <br>
-                  <span class="benWarn">STRUCTURES CONVENTION: UP or RIGHT is POS(+) and DOWN or LEFT is NEG(-)</span>
-  
-  
+                  <span class="benWarn">IF Mmax DOES NOT OCCUR AT THE SAME LOCATION YOU CANNOT COMBINE CASE FORMULAS.</span>
                 </p>
               </div>
             </div>
