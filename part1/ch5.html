@@ -32,6 +32,37 @@
         
     </header>
     
+    <!-- \[...\] == Displayed Equation, \(...\) == Inline Equation -->
+    <!-- <table class="center">
+                    <tr>
+                      <td>Where:</td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <td></td>
+                      <td>r, radius of gyration, (in)</td>
+                    </tr> 
+                    <tr>
+                      <td></td>
+                      <td>I, moment of inertia, (in\(^4\))</td>
+                    </tr> 
+                    <tr>
+                      <td></td>
+                      <td>A, area, (in\(^2\)</td>
+                    </tr>                  
+                  <br>
+                 </table> 
+                 <br>
+      -->
+      <!--  <span class="def">Definition:</span> content <br> -->
+      <!--  <span class="subDef">Sub Definition:</span> content <br> -->
+
+      <!-- <picture>
+        <source srcset="/Structures/media/">
+          ADD PHOTO of THE CENTROID 
+      </picture>  -->
+
+      <!-- CH 5.1 -->
     <div class="accordion" id="accordionExample">
         <div class="card">
           <div class="card-header" id="chapter51">
@@ -44,11 +75,140 @@
       
           <div id="collapseOne" class="collapse show" aria-labelledby="chapter51" data-parent="#accordionExample">
             <div class="card-body">
-              Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+             <p>
+              <span class="def">Sawn Lumber:</span> Lumber that is finished on four sides This is what is found at a lumber yard. <br>
+
+              <span class="def">Bending Test:</span> A Bending test or flexure test is the first test that should be done to analyze the load of a system to determine the size of the beam required.  <br>
+
+              $$ M=F_bS $$
+              <table class="center">
+                <tr>
+                  <td>Where:</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td></td>
+                  <td>M, bending moment, (inlb)</td>
+                </tr> 
+                <tr>
+                  <td></td>
+                  <td>S, , Elastic Section Modulus, (in\(^3\))</td>
+                </tr> 
+                <tr>
+                  <td></td>
+                  <td>\(F_b\), allowable bending stress, (psi)</td>
+                </tr>                
+              <br>
+             </table> 
+
+             <span style="font-weight: bold; text-decoration: underline;">Once the reference design value for a material has been found, it needs to be adjusted for the specific loading condition that the beam will be under. </span>
+             <ul>
+               <li>This adjusted \(F_b\) is known as \(F'_b\) which considers various variables that will change what is acceptable for the beam.</li>
+             </ul>
+
+             <h3>Adjustment Factors (pg. 92 or 468)</h3>
+             For \(F'_b\) the primarily used loading factors are \(C_D\), \(C_F\), and \(C_r\)
+             <ul>
+               <li>Load Duration Factor (\(C_D\))</li>
+             </ul>
+
+             <table class="center">
+                <th>
+                  <td>Load Duration</td>
+                  <td>\(C_D\)</td>
+                  <td>Example of Load</td>
+                </th>
+                <tr>
+                  <td>Permanent</td>
+                  <td>0.9</td>
+                  <td>Dead Load</td>
+                </tr>
+                <tr>
+                  <td>Ten Years</td>
+                  <td>1.0</td>
+                  <td>Occupancy Live Load</td>
+                </tr>
+                <tr>
+                  <td>Two Months</td>
+                  <td>1.15</td>
+                  <td>Snow Load</td>
+                </tr>
+                <tr>
+                  <td>Seven Days</td>
+                  <td>1.25</td>
+                  <td>Construction Load</td>
+                </tr>
+                <tr>
+                  <td>Ten Minutes</td>
+                  <td>1.6</td>
+                  <td>Wind/Earthquake Load</td>
+                </tr>
+                <tr>
+                  <td>Impact</td>
+                  <td>2.0</td>
+                  <td>Impact Load</td>
+                </tr>
+             </table>
+
+             <ul>
+               <li>Size Factor (\(C_F\)</li>
+             </ul>
+             <span class="benWarn">STRUCTURES CONVENTION: DOES NOT APPLY TO SOUTHERN PINE</span><br>
+             <span class="benWarn">STRUCTURES CONVENTION: ALL NUMBERS ARE NOMINAL</span><br>
+
+
+             For non-infinitessimally small area:
+              $$ I=\sum_{n=1}^{n=\infty}{A_nz_n^2} $$
+              <ul> 
+                <li>This means that we will take an infinite number of areas in a shape to calculate the Moment of Inertia.</li>
+                <li>This will not be how we solve for moment of inertia, generally</li>
+              </ul>
+
+              <br>
+              <table class="center">
+                <th>
+                  <td>SIZE FACTORS, \(C_F\)</td>
+                </th>
+                <th>
+                  <td>GRADES</td>
+                  <td>WIDTH</td>
+                  <td>2" & 3"</td>
+                  <td>4"</td>
+                </th>
+                <tr>
+                  <td>Select<br>Structural<br>No1 & Btr<br>No 1<br>No 2<br>No 3</td>
+                  <td>2", 3", 4"<br>5"<br>6"<br>8"<br>10"<br>12"<br>14" & Wider</td>
+                  <td>1.5<br>1.4<br>1.3<br>1.2<br>1.1<br>1.0<br>0.9</td>
+                  <td>1.5<br>1.4<br>1.3<br>1.3<br>1.2<br>1.1<br>1.0</1.2></td>
+                </tr>
+                <tr>
+                  <td>Stud</td>
+                  <td>2", 3", & 4"<br>5" & 6"<br>8" & Wider</td>
+                  <td>1.1<br>1.0<br>Use No.3 Grade Size Factors</td>
+                  <td>1.1<br>1.0<br>Use No.3 Grade Size Factors</td>
+                </tr>
+                <tr>
+                  <td>Constr. & Std</td>
+                  <td>2", 3", & 4"</td>
+                  <td>1.0</td>
+                  <td>1.0</td>
+                </tr>
+                <tr>
+                  <td>Utility</td>
+                  <td>4"<br>2"&3"</td>
+                  <td>1.0<br>0.4</td>
+                  <td>1.0<br>---</td>
+                </tr>
+             </table>
+
+              <br>
+              <span class="benWarn">STRUCTURES CONVENTION: Moment of Inertia is additive if they share the same neutral axis.</span>
+             </p>
             </div>
           </div>
         </div>
 
+        <!-- CH 5.2 -->
         <div class="card">
           <div class="card-header" id="chapter52">
             <h2 class="mb-0">
@@ -64,6 +224,7 @@
           </div>
         </div>
 
+        <!-- CH 5.3 -->
         <div class="card">
           <div class="card-header" id="chapter53">
             <h2 class="mb-0">
@@ -74,16 +235,17 @@
           </div>
           <div id="collapseThree" class="collapse" aria-labelledby="chapter53" data-parent="#accordionExample">
             <div class="card-body">
-              Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+              
             </div>
           </div>
         </div>
 
+        <!-- 5.4 & 5.5 -->
         <div class="card">
           <div class="card-header" id="chapter54">
             <h2 class="mb-0">
               <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
-                Chapter 5.4: Steps in Beam Design, Beam Design Example (pg 102-106)
+                Chapter 5.4 & 5.5: Steps in Beam Design, Beam Design Example (pg 102-111)
               </button>
             </h2>
           </div>
@@ -94,45 +256,33 @@
           </div>
         </div>
 
-        <div class="card">
-            <div class="card-header" id="chapter55">
-              <h2 class="mb-0">
-                <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
-                  Chapter 5.5: Beam Design Example 6a and 6b (pg 106-111)
-                </button>
-              </h2>
-            </div>
-            <div id="collapseFour" class="collapse" aria-labelledby="chapter55" data-parent="#accordionExample">
-              <div class="card-body">
-                Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
-              </div>
-            </div>
-          </div>
-
+        
+        <!-- Ch 5.6 -->
           <div class="card">
             <div class="card-header" id="chapter56">
               <h2 class="mb-0">
-                <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
                   Chapter 5.6: Notching Sawn Lumber Beams (pg 111-114)
                 </button>
               </h2>
             </div>
-            <div id="collapseFour" class="collapse" aria-labelledby="chapter56" data-parent="#accordionExample">
+            <div id="collapseSix" class="collapse" aria-labelledby="chapter56" data-parent="#accordionExample">
               <div class="card-body">
                 Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
               </div>
             </div>
           </div>
 
+          <!-- Ch 5.7 -->
           <div class="card">
             <div class="card-header" id="chapter57">
               <h2 class="mb-0">
-                <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseSeven" aria-expanded="false" aria-controls="collapseSeven">
                   Chapter 5.7: Built-Up Beams, Designing Backwards (pg 114-124)
                 </button>
               </h2>
             </div>
-            <div id="collapseFour" class="collapse" aria-labelledby="chapter57" data-parent="#accordionExample">
+            <div id="collapseSeven" class="collapse" aria-labelledby="chapter57" data-parent="#accordionExample">
               <div class="card-body">
                 Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
               </div>
