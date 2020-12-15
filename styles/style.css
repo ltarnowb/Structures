@@ -85,7 +85,7 @@
 
   .subDef{
     font-family: monospace;
-    text-indent: 50px;
+    margin-left: 50px;
   }
 
   .example{
