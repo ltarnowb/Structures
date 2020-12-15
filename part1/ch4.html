@@ -51,7 +51,6 @@
           <div id="collapseOne" class="collapse show" aria-labelledby="chapter41" data-parent="#accordionExample">
             <div class="card-body">
               <p>
-                <h3>Statical Moment:</h3>
                 <span class="def">Statical Moment:</span> The perpendicular distance from the centroid of a shape to a reference axis multiplied by the area of the shape. <br>
                 $$ statical\space moment = d\perp \cdot A $$
                 <table class="center">
@@ -70,7 +69,60 @@
                 <br>
                </table>
 
+              <span class="def">Axis of the Plane of Bending:</span> The axis perpendicular to the load, which is resisting the load, is acting against it. <br>
+              <br>
+              
+              ​<picture>
+                <source srcset="/Structures/media/">
+                  <!-- ADD PHOTO of Compression and Tension Ex--> 
+              </picture> 
 
+              <br>
+              <span class="def">Extreme Fiber Distance "c":</span> Where the most stress will occur in a beam. The farthest fibers from the neutral axis where the most stress will occur. <br>
+              <ul>
+                <li>For symmetrical shapes “c” is the same perpendicular distance (to the load) to either edge of the shape. </li>
+                <li class="benWarn">For asymmetrical shapes, it is important to differentiate which side “c” is measured to.</li>
+              </ul>
+              <br>
+
+              <br>
+              <span class="def">Centroid:</span> Every beam has an infinite number of neutral axes, one for every possible loading angle, and every neutral axis of a shape will cross through a point known as the centroid.<br>
+              <ul>
+                <li>The centroid is the center of gravity of the beams cross section; for a symmetrical object it is the center of the shape. </li>
+              </ul>
+              <br>
+
+              <picture>
+                <source srcset="/Structures/media/">
+                  <!-- ADD PHOTO of THE CENTROID--> 
+              </picture> 
+              
+              $$ statical\space moment = d\perp \cdot A $$
+                <table class="center">
+                  <tr>
+                    <td>Where:</td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td>d \(\perp\), is the distance from the neutral axis to the reference axis, (in.)</td>
+                  </tr> 
+                  <tr>
+                    <td></td>
+                    <td>A, is the area of the shape, (in\(^2\))</td>
+                  </tr>                
+                <br>
+               </table>
+
+               $$ d_{NA}A_{tot}=\ \sum{d_{1\bot}A_1}+d_{2\bot}A_2+d_{3\bot}A_{3tot}+\ldots$$
+
+               $$ d_{NA}=\frac{\ \sum{d_{1\bot}A_1}+d_{2\bot}A_2+d_{3\bot}A_{3tot}+\ldots}{A_{tot}} $$
+
+               $$ {d\prime}_{NA}=d_{shape}-d_{NA} $$
+
+               $$ c={the\ greater\ of\ d\prime}_{NA}\ or\ d_{NA} $$
+
+               <span class="benWarn">STRUCTURES CONVENTION: The material must be the same when creating built up shapes for the Geometric properties to work</span>
               </p>
             </div>
           </div>
@@ -88,25 +140,47 @@
           <div id="collapseThree" class="collapse" aria-labelledby="chapter43" data-parent="#accordionExample">
             <div class="card-body">
               <p>
-                <h3>Introduction:</h3>
-                INSERT TEXT FOR INTRODUCTION OF WHAT THIS CHAPTER 
+                <span class="def">Moment of Inertia (I, in\(^4\):</span> Quantifies a beams resistance to deformation (deflection).<br>
+                <ul>
+                  <li>-	Higher moment of inertia the less deflection will occur. </li>
+                </ul>
                 <br>
+
+                For infinitessimally small area:
+                $$ I_\infty\ =\ Az^2 $$
+                <table class="center">
+                  <tr>
+                    <td>Where:</td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td>A, is the area of the shape, (in\(^2\))</td>
+                  </tr> 
+                  <tr>
+                    <td></td>
+                    <td>z, is the perpendicular distance from the neutral axis of a component to the neutral axis of the built-up shape, (in)</td>
+                  </tr>                
                 <br>
-                <h3>Parts of Force</h3>
-                <span class="def">Line of Action:</span> An Imaginary line that continues through the path of the force infinitely behind and in front of the force. <br>
+               </table> 
+
+               For non-infinitessimally small area:
+                $$ I=\sum_{n=1}^{n=\infty}{A_nz_n^2} $$
+                <ul> 
+                  <li>This means that we will take an infinite number of areas in a shape to calculate the Moment of Inertia.</li>
+                  <li>This will not be how we solve for moment of inertia, generally</li>
+                </ul>
+
+                <br>
+                <span class="benWarn">STRUCTURES CONVENTION: For most scenarios we will use the equations in Appendix A for each specific shape. or Appendix C or D for specific lumber or metal shapes.</span>
+
+                <br>
+                <span class="benWarn">STRUCTURES CONVENTION: Moment of Inertia is additive if they share the same neutral axis.</span>
+
                 <span class="def">Magnitude:</span> The value of a force. Measured in (lbs or kips). <br>
                 <span class="def">Direction:</span> The relationship between the line of action and a reference line. Ex/ up or down, left or right. <br>
                 <span class="def">Sense:</span> Defines whether the force is POS(+) or NEG(-).<br>
                 
-                ​<picture>
-                  <source srcset="/Structures/media/">
-                    <!-- ADD PHOTO of Tributary Area--> 
-                </picture>
-
-                <br>
-                <span class="benWarn">STRUCTURES CONVENTION: UP or RIGHT is POS(+) and DOWN or LEFT is NEG(-)</span>
-
-
               </p>
             </div>
           </div>
@@ -124,24 +198,49 @@
           <div id="collapseFour" class="collapse" aria-labelledby="chapter44" data-parent="#accordionExample">
             <div class="card-body">
               <p>
-                <h3>Introduction:</h3>
-                INSERT TEXT FOR INTRODUCTION OF WHAT THIS CHAPTER 
+                
+
+                For infinitessimally small area:
+                $$ I_{tot}\ =\ \sum_{n=1}^{n=\infty}{I_{O_n}+A_nz_n^2} $$
+                <table class="center">
+                  <tr>
+                    <td>Where:</td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td> \(I_{tot}\),moment of inertia of the whole shape, (in\(^4\))</td>
+                  </tr> 
+                  <tr>
+                    <td></td>
+                    <td> \(I_{O_n}\), the original I value of a component, (in\(^4\))</td>
+                  </tr> 
+                  <tr>
+                    <td></td>
+                    <td> \(A_n\), is the area of the shape, (in\(^2\))</td>
+                  </tr> 
+                  <tr>
+                    <td></td>
+                    <td>\(z_n\), the perpendicular distance between the neutral axis of a component and the neutral axis of the whole shape, (in)</td>
+                  </tr>                
                 <br>
-                <br>
-                <h3>Parts of Force</h3>
-                <span class="def">Line of Action:</span> An Imaginary line that continues through the path of the force infinitely behind and in front of the force. <br>
-                <span class="def">Magnitude:</span> The value of a force. Measured in (lbs or kips). <br>
-                <span class="def">Direction:</span> The relationship between the line of action and a reference line. Ex/ up or down, left or right. <br>
-                <span class="def">Sense:</span> Defines whether the force is POS(+) or NEG(-).<br>
+               </table> 
+
+                <h4>Steps to find the moment of Inertia for a built-up shape:</h4>
+                <ol>
+                  <li>Locate Neutral Axis of the built-up shape that is perpendicular to the load.</li>
+                  <li>Look up or calculate the moment of inertia, Ion, in the axis perpendicular to the load for each component.</li>
+                  <li>Use the equation above for each component to add up to the total Moment of Inertia, \(I_{tot}\)</li>
+                </ol>
+
+                <span class="example">Example</span> If you have four components in a shape this is what the equation would look like:<br>
+                <div style="text-align:center;"></span>\(I_{tot} =\)<span style="color: red;"> \({(I}_{o_1}+A_1z_1^2)+\)</span><span style="color: purple;">\({(I}_{o_2}+A_2z_2^2)+\)</span><span style="color: cyan;">\({(I}_{o_3}+A_3z_3^2)+\)</span><span style="color: #CCCC00;">\({(I}_{o_1}+A_4z_4^2)\)</span></div><br>
                 
                 ​<picture>
                   <source srcset="/Structures/media/">
-                    <!-- ADD PHOTO of Tributary Area--> 
+                    <!-- ADD PHOTO of Example--> 
                 </picture>
-
-                <br>
-                <span class="benWarn">STRUCTURES CONVENTION: UP or RIGHT is POS(+) and DOWN or LEFT is NEG(-)</span>
-
+                
 
               </p>
             </div>

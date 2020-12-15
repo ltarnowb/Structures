@@ -88,6 +88,11 @@
     text-indent: 50px;
   }
 
+  .example{
+    font-weight: bold;
+    font-style: italic;
+  }
+
   .tableCont{
     text-align: left;
     
