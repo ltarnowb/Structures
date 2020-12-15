@@ -35,6 +35,35 @@
     </header>
 
     <!-- \[...\] == Displayed Equation, \(...\) == Inline Equation -->
+    <!-- <table class="center">
+                    <tr>
+                      <td>Where:</td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <td></td>
+                      <td>r, radius of gyration, (in)</td>
+                    </tr> 
+                    <tr>
+                      <td></td>
+                      <td>I, moment of inertia, (in\(^4\))</td>
+                    </tr> 
+                    <tr>
+                      <td></td>
+                      <td>A, area, (in\(^2\)</td>
+                    </tr>                  
+                  <br>
+                 </table> 
+                 <br>
+ -->
+<!--  <span class="def">Definition:</span> content <br> -->
+<!--  <span class="subDef">Sub Definition:</span> content <br> -->
+
+<!-- <picture>
+  <source srcset="/Structures/media/">
+    ADD PHOTO of THE CENTROID 
+</picture>  -->
+
     
     <div class="accordion" id="accordionExample">
 
@@ -255,24 +284,63 @@
             <div id="collapseFive" class="collapse" aria-labelledby="chapter45" data-parent="#accordionExample">
               <div class="card-body">
                 <p>
-                  <h3>Introduction:</h3>
-                  INSERT TEXT FOR INTRODUCTION OF WHAT THIS CHAPTER 
+                  <span class="def">Radius of Gyration, r:</span> Geometric Property that defines the resistance of a column to buckling. <br>
+                  <ul>
+                    <li>The radius of gyration relates the moment of inertia and the cross-sectional area of a column:</li>
+                  </ul>
+
+                  $$ r=\sqrt{\frac{I}{A}} $$
+
+                  <table class="center">
+                    <tr>
+                      <td>Where:</td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <td></td>
+                      <td>r, radius of gyration, (in)</td>
+                    </tr> 
+                    <tr>
+                      <td></td>
+                      <td>I, moment of inertia, (in\(^4\))</td>
+                    </tr> 
+                    <tr>
+                      <td></td>
+                      <td>A, area, (in\(^2\)</td>
+                    </tr>                  
                   <br>
-                  <br>
-                  <h3>Parts of Force</h3>
-                  <span class="def">Line of Action:</span> An Imaginary line that continues through the path of the force infinitely behind and in front of the force. <br>
-                  <span class="def">Magnitude:</span> The value of a force. Measured in (lbs or kips). <br>
-                  <span class="def">Direction:</span> The relationship between the line of action and a reference line. Ex/ up or down, left or right. <br>
-                  <span class="def">Sense:</span> Defines whether the force is POS(+) or NEG(-).<br>
+                 </table> 
+                 <br>
+
+                 
+
+                 <span class="def">Elastic Section Modulus, S:</span> Predicts the capacity of a beam made from an elastic material to resist bending forces and is relative to both the size and shape of a section. <br>
+                 <ul>
+                   <li>Unlike I, S is not additive unless the components of the built-up shape share the same neutral axis and the same extreme fiber distance.</li>
+                 </ul>
+
+                 $$ S=\ \frac{I}{c} $$
+                
+                 <table class="center">
+                  <tr>
+                    <td>Where:</td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td>S, Elastic Section Modulus, (in\(^3\))</td>
+                  </tr> 
+                  <tr>
+                    <td></td>
+                    <td>I, Moment of Inertia, (in\(^4\))</td>
+                  </tr> 
+                  <tr>
+                    <td></td>
+                    <td>c, Extreme Fiber Distance, (in)</td>
+                  </tr>                  
+                <br>
+               </table>
                   
-                  ​<picture>
-                    <source srcset="/Structures/media/">
-                      <!-- ADD PHOTO of Tributary Area--> 
-                  </picture>
-  
-                  <br>
-                  <span class="benWarn">STRUCTURES CONVENTION: UP or RIGHT is POS(+) and DOWN or LEFT is NEG(-)</span>
-  
   
                 </p>
               </div>
@@ -291,25 +359,60 @@
             <div id="collapseSix" class="collapse" aria-labelledby="chapter46" data-parent="#accordionExample">
               <div class="card-body">
                 <p>
-                  <h3>Introduction:</h3>
-                  INSERT TEXT FOR INTRODUCTION OF WHAT THIS CHAPTER 
+                  <span class="def">Flexure Formula:</span> Quantifies the relationship of a beam to resist bending forces in regards to geometric properties and material choice. <br>
+
+                  $$ M=F_bS $$
+
+                  <table class="center">
+                    <tr>
+                      <td>Where:</td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <td></td>
+                      <td>M, bending moment, (inlb)</td>
+                    </tr> 
+                    <tr>
+                      <td></td>
+                      <td>S, Elastic Section Modulus, (in\(^3\))</td>
+                    </tr> 
+                    <tr>
+                      <td></td>
+                      <td>\(F_b\), allowable bending stress, (psi)</td>
+                    </tr>                  
                   <br>
-                  <br>
-                  <h3>Parts of Force</h3>
-                  <span class="def">Line of Action:</span> An Imaginary line that continues through the path of the force infinitely behind and in front of the force. <br>
-                  <span class="def">Magnitude:</span> The value of a force. Measured in (lbs or kips). <br>
-                  <span class="def">Direction:</span> The relationship between the line of action and a reference line. Ex/ up or down, left or right. <br>
-                  <span class="def">Sense:</span> Defines whether the force is POS(+) or NEG(-).<br>
-                  
-                  ​<picture>
-                    <source srcset="/Structures/media/">
-                      <!-- ADD PHOTO of Tributary Area--> 
-                  </picture>
-  
-                  <br>
-                  <span class="benWarn">STRUCTURES CONVENTION: UP or RIGHT is POS(+) and DOWN or LEFT is NEG(-)</span>
-  
-  
+                 </table> 
+                 <br>
+
+                 “A beam with a greater depth resists bending better than a shallow beam because of the greater distance between the neutral axis and the compressive and tensile stresses in the beam, which gives it a greater resistance to the bending forces” – pg76 <br>
+                  <span class="subDef">- Illustrates why a shape is stronger when the depth (d) is larger than the base(b)</span>
+
+                 <span class="def">Plastic Analysis (pg. 80):</span> For a metal beam: as bending moment increases, the bending stress in the extreme fibers increases until it reaches the allowable bending stress, Fb. As the bending moment increases the bending stress in the extreme fibers increases until it reaches the minimum yield stress, known as the elastic limit (\(F_y\)<br>
+                 <span class="def">Yield Moment (\(M_y\)):</span> The moment that will produce elastic Limit(\(F_y\)) in the extreme fibers, \(M_y = F_yS\).  <br>
+                 <span class="def">Plastic Stress Distribution:</span> The point at which all of the fibers of a cross-section have reached (\(F_y\)).<br>
+                 <span class="def">Plastic Moment:</span> The moment that will produce a full plastic stress distribution.<br>
+
+                 $$ M_P=\ F_YZ $$
+                
+                 <table class="center">
+                  <tr>
+                    <td>Where:</td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td>\(M_P\), Plastic Moment, (inlb)</td>
+                  </tr> 
+                  <tr>
+                    <td></td>
+                    <td>Z, Plastic Section Modulus, (in\(^3\))</td>
+                  </tr> 
+                  <tr>
+                    <td></td>
+                    <td>\(F_y\), plastic limit, (psi)</td>
+                  </tr>                  
+                <br>
+               </table>
                 </p>
               </div>
             </div>

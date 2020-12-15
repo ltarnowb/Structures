@@ -81,6 +81,7 @@
   /* Definition Format Style */
   .def{
     font-family: monospace;
+    font-weight: bold;
   }
 
   .subDef{
