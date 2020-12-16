@@ -417,175 +417,45 @@
                       <li>\(C_r\), Repetitive Member Factor, either 1.0 or 1.15.</li>
                     </ol>
                     <li>Calculate the adjusted bending design value, \(F_b\)</li>
-                    $$ {f\prime}_b = (C_D\cdot C_F \cdot C_r)F_b
+                    $$ {f\prime}_b = (C_D\cdot C_F \cdot C_r)F_b $$
+                    <li>Using \({f\prime}_b\) and \(M_{max}\) solve the flexure formula for the minimum required section modulus, \(S_{req}\)</li>
+                    $$ S_{req}=\ \frac{M_{max}}{F_b^\prime} $$
+                    <li>Using the Section Properties table (Appendix C, pg.467), find a beam which satisfies \(S_{req}\). If the beam is not in the estimated size range, repeat steps 1 through 3 above.</li>
+                    <li>Now that the actual beam is known, \(M_{max}\), \(S_{req}\), and \(F_b) may need to be recalculated if the weight of a beam exceeds the estimated beam weight. Beam weights are found in the section properties table in Appendix C</li>
+                  </ol>
+                  <li>Shear Test:</li>
+                  <ol>
+                    <li>Calculate the adjusted horizontal shear design value</li>
+                    $$ {F\prime}_v = C_D \cdot F_b $$
+                    <li>Use the horizontal shear formula for a solid rectangular section to find the actual horizontal shear stress</li>
+                    <li>Check that the beam selected for bending meets the minimum required area. </li>
+                  </ol>
+                  <li>Deflection Test:</li>
+                  <ol>
+                    <li>Choose the design criteria if not given in the problem. The standard for theatre is l/240.</li>
+                    $$\delta_{all}≤l360   or   \delta_{all}≤l240    or   \delta_{all}≤l180$$
+                    <li>Use a deflection formula if it is a simple beam. </li>
+                    <li>If the loading condition is atypical solve for \(w_{equiv}\) and then plug in to find the deflection (pg. 99 has an example</li>
+                  </ol>
+                  <li>Select a Beam</li>
+                  <ol>
+                    <li>Select a beam that passes all of the tests previously</li>
                   </ol>
                 </ol>
-                <span class="def">Sawn Lumber:</span> Lumber that is finished on four sides This is what is found at a lumber yard. <br>
-  
-                <span class="def">Bending Test:</span> A Bending test or flexure test is the first test that should be done to analyze the load of a system to determine the size of the beam required.  <br>
-  
-                $$ M=F_bS $$
-                <table class="center">
-                  <tr>
-                    <td>Where:</td>
-                    <td></td>
-                  </tr>
-                  <tr>
-                    <td></td>
-                    <td>M, bending moment, (inlb)</td>
-                  </tr> 
-                  <tr>
-                    <td></td>
-                    <td>S, , Elastic Section Modulus, (in\(^3\))</td>
-                  </tr> 
-                  <tr>
-                    <td></td>
-                    <td>\(F_b\), allowable bending stress, (psi)</td>
-                  </tr>                
-               </table> 
-               <br>
-               <br>
-               <span style="font-weight: bold; text-decoration: underline;">Once the reference design value for a material has been found, it needs to be adjusted for the specific loading condition that the beam will be under. </span>
-               <ul>
-                 <li>This adjusted \(F_b\) is known as \(F'_b\) which considers various variables that will change what is acceptable for the beam.</li>
-               </ul>
-  
-               <h3>Adjustment Factors (pg. 92 or 468)</h3>
-               For \(F'_b\) the primarily used loading factors are \(C_D\), \(C_F\), and \(C_r\)
-              
-              <h4>Load Duration Factor (\(C_D\))</h4>
-               
-  
-               <table class="centerBorder">
-                  <tr id="border">
-                    <td id="border" style="font-weight: bold;">Load Duration</td>
-                    <td style="font-weight: bold;">\(C_D\)</td>
-                    <td id="border" style="font-weight: bold;">Example of Load</td>
-                  </tr>
-                  <tr id="border">
-                    <td id="border">Permanent</td>
-                    <td>0.9</td>
-                    <td id="border">Dead Load</td>
-                  </tr>
-                  <tr id="border">
-                    <td id="border">Ten Years</td>
-                    <td>1.0</td>
-                    <td id="border">Occupancy Live Load</td>
-                  </tr>
-                  <tr id="border">
-                    <td id="border">Two Months</td>
-                    <td>1.15</td>
-                    <td id="border">Snow Load</td>
-                  </tr>
-                  <tr id="border">
-                    <td id="border">Seven Days</td>
-                    <td>1.25</td>
-                    <td id="border">Construction Load</td>
-                  </tr>
-                  <tr id="border">
-                    <td id="border">Ten Minutes</td>
-                    <td>1.6</td>
-                    <td id="border">Wind/Earthquake Load</td>
-                  </tr>
-                  <tr id="border">
-                    <td id="border">Impact</td>
-                    <td>2.0</td>
-                    <td id="border">Impact Load</td>
-                  </tr>
-               </table>
-  
-               
-              <h4>Size Factor (\(C_F\)</h4>
-              
-               <span class="benWarn">STRUCTURES CONVENTION: DOES NOT APPLY TO SOUTHERN PINE</span><br>
-               <span class="benWarn">STRUCTURES CONVENTION: ALL NUMBERS ARE NOMINAL</span><br>
-  
-  
-               For non-infinitessimally small area:
-                $$ I=\sum_{n=1}^{n=\infty}{A_nz_n^2} $$
-                <ul> 
-                  <li>This means that we will take an infinite number of areas in a shape to calculate the Moment of Inertia.</li>
-                  <li>This will not be how we solve for moment of inertia, generally</li>
+
+                <h4>Rule of Thumb</h4>
+                <ul>
+                  <li>A long unsupported span will most likely fail due to the bending or deflection test</li>
+                  <li>A short beam is more likely to fail due to the shear test</li>
                 </ul>
-  
-                <br>
-                <table class="centerBorder">
-                  <th>
-                    <td colspan="4">SIZE FACTORS, \(C_F\)</td>
-                  </th>
-                  <tr id="border">
-                    <td id="border" style="font-weight: bold;">GRADES</td>
-                    <td style="font-weight: bold;">WIDTH</td>
-                    <td id="border" style="font-weight: bold;">2" & 3"</td>
-                    <td style="font-weight: bold;">4"</td>
-                  </tr>
-                  <trid="border">
-                    <td id="border">Select<br>Structural<br>No1 & Btr<br>No 1<br>No 2<br>No 3</td>
-                    <td>2", 3", 4"<br>5"<br>6"<br>8"<br>10"<br>12"<br>14" & Wider</td>
-                    <td id="border">1.5<br>1.4<br>1.3<br>1.2<br>1.1<br>1.0<br>0.9</td>
-                    <td>1.5<br>1.4<br>1.3<br>1.3<br>1.2<br>1.1<br>1.0</1.2></td>
-                  </tr>
-                  <tr id="border">
-                    <td id="border">Stud</td>
-                    <td>2", 3", & 4"<br>5" & 6"<br>8" & Wider</td>
-                    <td id="border">1.1<br>1.0<br>Use No.3 Grade Size Factors</td>
-                    <td>1.1<br>1.0<br>Use No.3 Grade Size Factors</td>
-                  </tr>
-                  <tr id="border">
-                    <td id="border">Constr. & Std</td>
-                    <td>2", 3", & 4"</td>
-                    <td id="border">1.0</td>
-                    <td>1.0</td>
-                  </tr>
-                  <tr id="border">
-                    <td id="border">Utility</td>
-                    <td>4"<br>2"&3"</td>
-                    <td id="border">1.0<br>0.4</td>
-                    <td>1.0<br>---</td>
-                  </tr>
-               </table>
-               <br>
-  
-               <h4>Repetitive Member Factor (\(C_r\))</h4>
-               The tabulated bending design values for dimension lumber 2” to 4” thick are multiplied by the repetitive member factor, Cr, which equals 1.15, when they are used as joists, truss, chords, rafters, studs, planks, decking, or similar applications. They must also:</li>
-               <ul>
-                 <li>Be in contact or spaced on 2’ centers or less</li>
-                 <li>Consist of at least three members</li>
-                 <li>Be joined by a floor, roof, or other load distributing element properly designed to support the loading condition.</li>
-               </ul>
-               <br>
-               
-               <h4>Flat Use Factor (\(C_u\))</h4>
-               <ul>
-                 <li>The Flat Use Factor could be used when analyzing built-up shapes. </li>
-                 <li>o	This is used when the load is applied to the wide face of the member. </li>
-               </ul>
-               <br>
-  
-               <h4>Beam Stability Factor (\(C_L\))</h4>
-               <ul>
-                 <li>Factor to ensure that a member is adequately braced to prevent buckling.</li>
-                 <li>Shapes Closest to Square have a \(C_L\) == 0 </li>
-                 <li>The following tests are used to determine how the beam should be braced to reach a value of \(C_L\)==0</li>
-                 <li>The NDS defines a method for determining \(C_L\). Use the following standards to determine when a beam is safe to use \(C_L\) == 0. </li>
-                 <li>How to Determine \(C_L\):</li>
-                 <ol>
-                   <li>d/b ≤ 2: No lateral support shall be required </li>
-                   <li>2 < d/b ≤ 4: The ends shall be held in position, as by full depth solid blocking, bridging, hangers, nailing or bolting to other framing members or other acceptable means. </li>
-                   <li>4 < b/d ≤ 5: The compression edge of the member shall be held in line for its entire length to prevent lateral displacement, as by adequate sheathing or subflooring, and ends at point of bearing shall be held in position to prevent rotation and/or lateral displacement. </li>
-                   <li>5 < b/d ≤ 6: Bridging, full depth solid blocking or diagonal cross bracing shall be installed at intervals not exceeding 8 feet, the compression edge of the member shall be held in line by adequate sheathing or subflooring, and the ends at points of bearing shall be held in position to prevent rotation and/or lateral displacement.</li>
-                   <li>6 < d/b ≤ 7: Both edges shall be held in line for their entire length and ends at point of bearing shall be held in position to prevent rotation and/or lateral displacement. </li>
-                  </ol>
-               </ul>
                
                </p>
             </div>
           </div>
         </div>
-
         
         <!-- Ch 5.6 -->
-          <div class="card">
+        <div class="card">
             <div class="card-header" id="chapter56">
               <h2 class="mb-0">
                 <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
@@ -595,13 +465,92 @@
             </div>
             <div id="collapseSix" class="collapse" aria-labelledby="chapter56" data-parent="#accordionExample">
               <div class="card-body">
-                Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                <p>
+                  \[...\] == Displayed Equation, \(...\) == Inline Equation
+                  <table class="center">
+                    <tr>
+                      <td>Where:</td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <td></td>
+                      <td>r, radius of gyration, (in)</td>
+                    </tr> 
+                    <tr>
+                      <td></td>
+                      <td>I, moment of inertia, (in\(^4\))</td>
+                    </tr> 
+                    <tr>
+                      <td></td>
+                      <td>A, area, (in\(^2\)</td>
+                    </tr>                  
+                 </table> 
+                 <br>
+      
+                <span class="def">Definition:</span> content <br>
+                <span class="subDef">Sub Definition:</span> content <br>
+
+                <picture>
+                    <source srcset="/Structures/media/">
+                      ADD PHOTO of THE CENTROID 
+                </picture> 
+
+                <span class="def">Notching a Beam:</span> The process of cutting a slot out of a beam. Note: Notching a beam reduces the integrity of a beam
+                <ul>
+                  <li>NDS recommends avoiding notching at any time however, the flexural properties of a beam will be unaffected if the following conditions are met:</li>
+                  <ul>
+                    <li>Notches are not permitted in the middle ofa span</li>
+                    <li>No notch length can be longer than 1/3 of the actual beam depth</li>
+                    <li>Notch Height can not be taller than 1/4 of the beam height.</li>
+                    <li>For notches in the end-thirds, the depth cannot be longer than 1/6 of the actual beam depth except for those beams directly over a support </li>
+                  </ul>
+                </ul>
+
+                The allowable shear stress parallel to the grain for a member notched at the ends can be calculated using the following equation: 
+
+                $$ V_{all}=(\frac{2{F^\prime}_vbd_n}{3}){(\frac{d_n}{d})}^2 $$
+
+                <table class="center">
+                  <tr>
+                    <td>Where:</td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td>\({F\prime}_v), adjusted horizontal shear design value, (psi)</td>
+                  </tr> 
+                  <tr>
+                    <td></td>
+                    <td>b, width of the member, (in)</td>
+                  </tr> 
+                  <tr>
+                    <td></td>
+                    <td>d, depth of the member, (in)</td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td>\(d_n\), depth of the member minus the notch depth (in)</td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td>\(V_{all}\), depth of the member minus the notch depth (in)</td>
+                  </tr>                  
+                </table> 
+
+                <picture>
+                  <source srcset="/Structures/media/">
+                  ADD PHOTO of Side View and Cutout 
+                </picture> 
+
+
+                
+                </p>
               </div>
             </div>
-          </div>
+        </div>
 
           <!-- Ch 5.7 -->
-          <div class="card">
+        <div class="card">
             <div class="card-header" id="chapter57">
               <h2 class="mb-0">
                 <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseSeven" aria-expanded="false" aria-controls="collapseSeven">
@@ -614,7 +563,7 @@
                 Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
               </div>
             </div>
-          </div>
+        </div>
 
 
       </div>
