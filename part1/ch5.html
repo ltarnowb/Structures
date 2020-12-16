@@ -63,9 +63,11 @@
           ADD PHOTO of THE CENTROID 
       </picture>  -->
 
-      <!-- CH 5.1 -->
+      
     <div class="accordion" id="accordionExample">
-        <div class="card">
+        
+      <!-- CH 5.1 -->
+      <div class="card">
           <div class="card-header" id="chapter51">
             <h2 class="mb-0">
               <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
@@ -157,14 +159,6 @@
              <span class="benWarn">STRUCTURES CONVENTION: DOES NOT APPLY TO SOUTHERN PINE</span><br>
              <span class="benWarn">STRUCTURES CONVENTION: ALL NUMBERS ARE NOMINAL</span><br>
 
-
-             For non-infinitessimally small area:
-              $$ I=\sum_{n=1}^{n=\infty}{A_nz_n^2} $$
-              <ul> 
-                <li>This means that we will take an infinite number of areas in a shape to calculate the Moment of Inertia.</li>
-                <li>This will not be how we solve for moment of inertia, generally</li>
-              </ul>
-
               <br>
               <table class="centerBorder">
                 <th>
@@ -228,15 +222,13 @@
                <li>How to Determine \(C_L\):</li>
                <ol>
                  <li>d/b ≤ 2: No lateral support shall be required </li>
-                 <li>2 \< d/b ≤ 4: The ends shall be held in position, as by full depth solid blocking, bridging, hangers, nailing or bolting to other framing members or other acceptable means. </li>
-                 <li>4 \< b/d ≤ 5: The compression edge of the member shall be held in line for its entire length to prevent lateral displacement, as by adequate sheathing or subflooring, and ends at point of bearing shall be held in position to prevent rotation and/or lateral displacement. </li>
-                 <li>5 \< b/d ≤ 6: Bridging, full depth solid blocking or diagonal cross bracing shall be installed at intervals not exceeding 8 feet, the compression edge of the member shall be held in line by adequate sheathing or subflooring, and the ends at points of bearing shall be held in position to prevent rotation and/or lateral displacement.</li>
-                 <li>6 \< d/b ≤ 7: Both edges shall be held in line for their entire length and ends at point of bearing shall be held in position to prevent rotation and/or lateral displacement. </li>
+                 <li>2 < d/b ≤ 4: The ends shall be held in position, as by full depth solid blocking, bridging, hangers, nailing or bolting to other framing members or other acceptable means. </li>
+                 <li>4 < b/d ≤ 5: The compression edge of the member shall be held in line for its entire length to prevent lateral displacement, as by adequate sheathing or subflooring, and ends at point of bearing shall be held in position to prevent rotation and/or lateral displacement. </li>
+                 <li>5 < b/d ≤ 6: Bridging, full depth solid blocking or diagonal cross bracing shall be installed at intervals not exceeding 8 feet, the compression edge of the member shall be held in line by adequate sheathing or subflooring, and the ends at points of bearing shall be held in position to prevent rotation and/or lateral displacement.</li>
+                 <li>6 < d/b ≤ 7: Both edges shall be held in line for their entire length and ends at point of bearing shall be held in position to prevent rotation and/or lateral displacement. </li>
                 </ol>
              </ul>
 
-              <br>
-              <span class="benWarn">STRUCTURES CONVENTION: Moment of Inertia is additive if they share the same neutral axis.</span>
              </p>
             </div>
           </div>
@@ -253,7 +245,97 @@
           </div>
           <div id="collapseTwo" class="collapse" aria-labelledby="Chapter52" data-parent="#accordionExample">
             <div class="card-body">
-              Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+              <p>
+                Shear Test is the second step in the sawn lumber beam design process.
+                <ul>
+                  <li>Shear occurs when one plane of a member slides past an adjacent plane.</li>
+                  <li>Shear can occur horizontally, vertically, and diagonally. </li>
+                  <li class="benWarn">WOOD IS MOST VULNERABLE TO HORIZONTAL SHEAR FORCES DUE TO WOOD GRAIN</li>
+                  <li class="benWarn">Wood only shears in the vertical direction in extreme cases</li>
+                </ul>
+
+                <h4>Derivation of the Shear Formula</h4>
+                Horizontal Shear = \(V_{max}\)(Maximum Vertical Shear) along the beam
+
+                $$ f_v=\ \frac{VQ}{Ib} $$
+
+                <table class="center">
+                  <tr>
+                    <td>Where:</td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td>\(F_v\), The actual horizontal shear stress, (psi)</td>
+                  </tr> 
+                  <tr>
+                    <td></td>
+                    <td>V, the magnitude of vertical shear at a location along the beam, (lbs)</td>
+                  </tr> 
+                  <tr>
+                    <td></td>
+                    <td>Q, the Statical moment of area above or below the plane, (in\(^3\)</td>
+                  </tr> 
+                  <tr>
+                    <td></td>
+                    <td>I, the moment of inertia in the plane of bending, (in\(^4\)</td>
+                  </tr> 
+                  <tr>
+                    <td></td>
+                    <td>b, the width of the material at the plane, (in)</td>
+                  </tr>                
+                <br>
+               </table> 
+
+               "Though the maximum horizontal shear stress of any beam occurs at the neutral axis, a structural designer can calculate the horizontal shear stress in other critical planes, such as a joint of a built-up shape. " -pg.95
+
+               To find \(f_v\) you must first find the statical moment of area (Q):
+               <span class="def">Statical Moment of Area (Q):</span>The area above or below the shear plane multiplied between the neutral axis of that area and the neutral axis of the shape.
+               <ul>
+                 <li>Q is taken with respect of the neutral axis </li>
+                 <li>For Convenience Q should be calculated for whichever area above or below the shear plane that is the least complex mathematically to solve for. </li>
+                 <li>If the member is a complicated shape the structural designer can either:</li>
+                 <ul>
+                   <li>A) find the statical moment of each component of the complex area and add them together to find Q </li>
+                   <li>B) First find the neutral axis of the complex area then find the statical moment of the area for a complex area. </li>
+                 </ul>
+               </ul>
+
+               $$ Q=d_AA_A+d_BA_B+\ldots $$
+
+               <table class="center">
+                <tr>
+                  <td>Where:</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td></td>
+                  <td>Q, statical moment above or below the shear plane, (in\(^3\)</td>
+                </tr> 
+                <tr>
+                  <td></td>
+                  <td>d, is the \(\perp\) distance between the neutral axis of a component and the neutral axis of the entire shape, (in)</td>
+                </tr> 
+                <tr>
+                  <td></td>
+                  <td>A, the area of a component, (in\(^2\)</td>
+                </tr> 
+                </table> 
+
+                In a simple shape we can derive the equation into a simpler form. Looking at pg 96 we can calculate Q and \(f_v\) for solid rectangle.
+
+                $$ Q_{rect}=\frac{{bd}^2}{8} $$
+
+                $$f_v=1.5\frac{V}{bd}\ or\ f_v=1.5\frac{V}{A}$$
+
+                <h4>Shear Adjustment Factor:</h4>
+
+                <span class="benWarn">ONLY CD will be used for the Adjustment Factor</span>
+
+                $$ {F\prime}_v=C_D\ast F_v $$
+                
+               
+               </p>
             </div>
           </div>
         </div>
@@ -269,7 +351,39 @@
           </div>
           <div id="collapseThree" class="collapse" aria-labelledby="chapter53" data-parent="#accordionExample">
             <div class="card-body">
-              
+              <p>
+                <h3>Deflection Test</h3>
+                <ul>
+                  <li>The deflection test is not a failure test</li>
+                  <li>It is a test to see if a beam should be allowed for a given application</li>
+                  <li>STANDARD DEFLECTION CRITERIA IS l/240</li>
+                </ul>
+
+                $$ \delta_{all}≤l360   or   \delta_{all}≤l240    or   \delta_{all}≤l180 $$
+
+                <table class="center">
+                  <tr>
+                    <td>Where:</td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td>\delta_{all}, maximum allowable deflection, (in)</td>
+                  </tr>  
+                  <tr>
+                    <td></td>
+                    <td>\(l\), length of the span, (in)</td>
+                  </tr>                
+               </table> 
+               <br>
+               
+              <ul>
+                <li>l/360 is the maximum amount of deflection for a live load such that a plaster ceiling would not crack over time. </li>
+                <li>l/240 is the criteria used for live loads that do not support a plaster ceiling</li>
+                <li>l/180 is the least restrictive criteria and is not often used, the beam will feel uncomfortably springy.</li>
+              </ul>
+               
+               </p>
             </div>
           </div>
         </div>
@@ -285,7 +399,186 @@
           </div>
           <div id="collapseFour" class="collapse" aria-labelledby="chapter54" data-parent="#accordionExample">
             <div class="card-body">
-              Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+              <p>
+
+                <ol>
+                  <li>Draw Free Body Diagram (FBD), indicating all loads including estimated beam weight.</li>
+                  <li>Determine \(V_{max}\) and \(M_{max}\) using case formulas or by finding reactions, where vertical shear crosses zero, and finding \(V_{max}\) and \(M_{max}\).</li>
+                  <li>Identify the applicable reference design values of \(F_b\), \(F_y\), and E for the specific species and Grad of Lumber used in the loading condition.</li>
+                  <li>Bending Test:</li>
+                  <ol>
+                    <li>Determine the applicable adjustment factor for the application (Refer to CH5.1 to determine the adjustment factors to use</li>
+                    <ol>
+                      <li>\(C_D\), Load Duration Factor(Normal == 10 Years or Less == 1.0, 2 Months == 1.15</li>
+                      <li>\(C_F\), Size Factor, must be estimated. A good rule of thumb is to start that every foot of span requires 1 inch of depth for a 2x member</li>
+                      <ul>
+                        <li class="benWarn">UNLESS IT IS SOUTHERN PINE, OMIT CF IF BEAM IS MADE OF SOUTHERN PINE</li>
+                      </ul>
+                      <li>\(C_r\), Repetitive Member Factor, either 1.0 or 1.15.</li>
+                    </ol>
+                    <li>Calculate the adjusted bending design value, \(F_b\)</li>
+                    $$ {f\prime}_b = (C_D\cdot C_F \cdot C_r)F_b
+                  </ol>
+                </ol>
+                <span class="def">Sawn Lumber:</span> Lumber that is finished on four sides This is what is found at a lumber yard. <br>
+  
+                <span class="def">Bending Test:</span> A Bending test or flexure test is the first test that should be done to analyze the load of a system to determine the size of the beam required.  <br>
+  
+                $$ M=F_bS $$
+                <table class="center">
+                  <tr>
+                    <td>Where:</td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td>M, bending moment, (inlb)</td>
+                  </tr> 
+                  <tr>
+                    <td></td>
+                    <td>S, , Elastic Section Modulus, (in\(^3\))</td>
+                  </tr> 
+                  <tr>
+                    <td></td>
+                    <td>\(F_b\), allowable bending stress, (psi)</td>
+                  </tr>                
+               </table> 
+               <br>
+               <br>
+               <span style="font-weight: bold; text-decoration: underline;">Once the reference design value for a material has been found, it needs to be adjusted for the specific loading condition that the beam will be under. </span>
+               <ul>
+                 <li>This adjusted \(F_b\) is known as \(F'_b\) which considers various variables that will change what is acceptable for the beam.</li>
+               </ul>
+  
+               <h3>Adjustment Factors (pg. 92 or 468)</h3>
+               For \(F'_b\) the primarily used loading factors are \(C_D\), \(C_F\), and \(C_r\)
+              
+              <h4>Load Duration Factor (\(C_D\))</h4>
+               
+  
+               <table class="centerBorder">
+                  <tr id="border">
+                    <td id="border" style="font-weight: bold;">Load Duration</td>
+                    <td style="font-weight: bold;">\(C_D\)</td>
+                    <td id="border" style="font-weight: bold;">Example of Load</td>
+                  </tr>
+                  <tr id="border">
+                    <td id="border">Permanent</td>
+                    <td>0.9</td>
+                    <td id="border">Dead Load</td>
+                  </tr>
+                  <tr id="border">
+                    <td id="border">Ten Years</td>
+                    <td>1.0</td>
+                    <td id="border">Occupancy Live Load</td>
+                  </tr>
+                  <tr id="border">
+                    <td id="border">Two Months</td>
+                    <td>1.15</td>
+                    <td id="border">Snow Load</td>
+                  </tr>
+                  <tr id="border">
+                    <td id="border">Seven Days</td>
+                    <td>1.25</td>
+                    <td id="border">Construction Load</td>
+                  </tr>
+                  <tr id="border">
+                    <td id="border">Ten Minutes</td>
+                    <td>1.6</td>
+                    <td id="border">Wind/Earthquake Load</td>
+                  </tr>
+                  <tr id="border">
+                    <td id="border">Impact</td>
+                    <td>2.0</td>
+                    <td id="border">Impact Load</td>
+                  </tr>
+               </table>
+  
+               
+              <h4>Size Factor (\(C_F\)</h4>
+              
+               <span class="benWarn">STRUCTURES CONVENTION: DOES NOT APPLY TO SOUTHERN PINE</span><br>
+               <span class="benWarn">STRUCTURES CONVENTION: ALL NUMBERS ARE NOMINAL</span><br>
+  
+  
+               For non-infinitessimally small area:
+                $$ I=\sum_{n=1}^{n=\infty}{A_nz_n^2} $$
+                <ul> 
+                  <li>This means that we will take an infinite number of areas in a shape to calculate the Moment of Inertia.</li>
+                  <li>This will not be how we solve for moment of inertia, generally</li>
+                </ul>
+  
+                <br>
+                <table class="centerBorder">
+                  <th>
+                    <td colspan="4">SIZE FACTORS, \(C_F\)</td>
+                  </th>
+                  <tr id="border">
+                    <td id="border" style="font-weight: bold;">GRADES</td>
+                    <td style="font-weight: bold;">WIDTH</td>
+                    <td id="border" style="font-weight: bold;">2" & 3"</td>
+                    <td style="font-weight: bold;">4"</td>
+                  </tr>
+                  <trid="border">
+                    <td id="border">Select<br>Structural<br>No1 & Btr<br>No 1<br>No 2<br>No 3</td>
+                    <td>2", 3", 4"<br>5"<br>6"<br>8"<br>10"<br>12"<br>14" & Wider</td>
+                    <td id="border">1.5<br>1.4<br>1.3<br>1.2<br>1.1<br>1.0<br>0.9</td>
+                    <td>1.5<br>1.4<br>1.3<br>1.3<br>1.2<br>1.1<br>1.0</1.2></td>
+                  </tr>
+                  <tr id="border">
+                    <td id="border">Stud</td>
+                    <td>2", 3", & 4"<br>5" & 6"<br>8" & Wider</td>
+                    <td id="border">1.1<br>1.0<br>Use No.3 Grade Size Factors</td>
+                    <td>1.1<br>1.0<br>Use No.3 Grade Size Factors</td>
+                  </tr>
+                  <tr id="border">
+                    <td id="border">Constr. & Std</td>
+                    <td>2", 3", & 4"</td>
+                    <td id="border">1.0</td>
+                    <td>1.0</td>
+                  </tr>
+                  <tr id="border">
+                    <td id="border">Utility</td>
+                    <td>4"<br>2"&3"</td>
+                    <td id="border">1.0<br>0.4</td>
+                    <td>1.0<br>---</td>
+                  </tr>
+               </table>
+               <br>
+  
+               <h4>Repetitive Member Factor (\(C_r\))</h4>
+               The tabulated bending design values for dimension lumber 2” to 4” thick are multiplied by the repetitive member factor, Cr, which equals 1.15, when they are used as joists, truss, chords, rafters, studs, planks, decking, or similar applications. They must also:</li>
+               <ul>
+                 <li>Be in contact or spaced on 2’ centers or less</li>
+                 <li>Consist of at least three members</li>
+                 <li>Be joined by a floor, roof, or other load distributing element properly designed to support the loading condition.</li>
+               </ul>
+               <br>
+               
+               <h4>Flat Use Factor (\(C_u\))</h4>
+               <ul>
+                 <li>The Flat Use Factor could be used when analyzing built-up shapes. </li>
+                 <li>o	This is used when the load is applied to the wide face of the member. </li>
+               </ul>
+               <br>
+  
+               <h4>Beam Stability Factor (\(C_L\))</h4>
+               <ul>
+                 <li>Factor to ensure that a member is adequately braced to prevent buckling.</li>
+                 <li>Shapes Closest to Square have a \(C_L\) == 0 </li>
+                 <li>The following tests are used to determine how the beam should be braced to reach a value of \(C_L\)==0</li>
+                 <li>The NDS defines a method for determining \(C_L\). Use the following standards to determine when a beam is safe to use \(C_L\) == 0. </li>
+                 <li>How to Determine \(C_L\):</li>
+                 <ol>
+                   <li>d/b ≤ 2: No lateral support shall be required </li>
+                   <li>2 < d/b ≤ 4: The ends shall be held in position, as by full depth solid blocking, bridging, hangers, nailing or bolting to other framing members or other acceptable means. </li>
+                   <li>4 < b/d ≤ 5: The compression edge of the member shall be held in line for its entire length to prevent lateral displacement, as by adequate sheathing or subflooring, and ends at point of bearing shall be held in position to prevent rotation and/or lateral displacement. </li>
+                   <li>5 < b/d ≤ 6: Bridging, full depth solid blocking or diagonal cross bracing shall be installed at intervals not exceeding 8 feet, the compression edge of the member shall be held in line by adequate sheathing or subflooring, and the ends at points of bearing shall be held in position to prevent rotation and/or lateral displacement.</li>
+                   <li>6 < d/b ≤ 7: Both edges shall be held in line for their entire length and ends at point of bearing shall be held in position to prevent rotation and/or lateral displacement. </li>
+                  </ol>
+               </ul>
+               
+               </p>
             </div>
           </div>
         </div>
