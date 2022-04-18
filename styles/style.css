@@ -61,8 +61,8 @@
     color: #212529;
     text-align: left;
     background-color: #fff;
-    padding-left: 15%;
-    padding-right: 15%;
+    padding-left: 5%;
+    padding-right: 5%;
   }
   
   [tabindex="-1"]:focus:not(:focus-visible) {
