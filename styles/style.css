@@ -68,6 +68,11 @@
   [tabindex="-1"]:focus:not(:focus-visible) {
     outline: 0 !important;
   }
+
+  content {
+    padding-left: 5%;
+    padding-right: 5%;
+  }
   
   hr {
     box-sizing: content-box;
