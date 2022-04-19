@@ -6,7 +6,7 @@ $(function(){
     dropdown.append('<option selected="true" disabled>Choose Shape</option>');
     dropdown.prop('selectedIndex', 0);
 
-    const url = "/Structures/data/angleREF.json";
+    const url = "/Structures/data/steel/angleREF.json";
 
     // Populate dropdown with list of provinces
     $.getJSON(url, function (data) {
