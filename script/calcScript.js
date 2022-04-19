@@ -1,15 +1,17 @@
-let dropdown = $('#shape-drop');
+$(function(){
+    let dropdown = $('#shape-drop');
 
-dropdown.empty();
+    dropdown.empty();
 
-dropdown.append('<option selected="true" disabled>Choose Shape</option>');
-dropdown.prop('selectedIndex', 0);
+    dropdown.append('<option selected="true" disabled>Choose Shape</option>');
+    dropdown.prop('selectedIndex', 0);
 
-const url = "\Structures\data\steel\Angle REF.json";
+    const url = "\Structures\data\steel\Angle REF.json";
 
-// Populate dropdown with list of provinces
-$.getJSON(url, function (data) {
-  $.each(data, function (key, entry) {
-    dropdown.append($('<option></option>').attr('value', entry.abbreviation).text(entry.name));
-  })
+    // Populate dropdown with list of provinces
+    $.getJSON(url, function (data) {
+    $.each(data, function (key, entry) {
+        dropdown.append($('<option></option>').attr('value', entry.abbreviation).text(entry.name));
+    })
+    });
 });
