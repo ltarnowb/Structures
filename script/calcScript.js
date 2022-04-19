@@ -11,7 +11,7 @@ $(function(){
     // Populate dropdown with list of provinces
     $.getJSON(url, function (data) {
     $.each(data, function (key, entry) {
-        dropdown.append($('<option></option>').attr('value', entry.abbreviation).text(entry.name));
+        dropdown.append($('<option></option>').attr('value', entry.size).text(entry.size));
     })
     });
 });
