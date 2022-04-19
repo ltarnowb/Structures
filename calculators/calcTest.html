@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=0">
+
+    <title>Structural Design Reference Guide</title>
+    <meta name="author" content="Luke Tarnow-Bulatowicz">
+    <meta name="description" content="">
+    
+    <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+    <script src="/Structures/script/LaTeXMathML.js"></script>
+    <!--Bootstrap + CSS-->
+    <link href="/Structures/styles/style.css" rel="stylesheet">
+    <script src="/Structures/script/bootstrap.js" defer></script>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    
+</head>
+
+
+<body>
+    <header>
+        
+        <script> 
+            $(function(){
+                $("#nav").load("/Structures/header.html");
+            });
+        </script>
+        <div id="nav">
+
+        </div>
+    </header>
+
+    <div id="book">
+        <label for="material">Choose Material:</label>
+        <select id="material" name="material">
+            <option value="steel">Steel</option>
+            <option value="steel">Aluminum</option>
+            <option value="steel">Wood</option>
+        </select>
+
+    </div>
+</body>
